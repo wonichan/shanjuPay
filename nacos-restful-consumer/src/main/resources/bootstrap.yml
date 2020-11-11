@@ -1,0 +1,40 @@
+server:
+  port: 56020
+
+#配置服务提供方的ip和端口
+provider:
+  address: 127.0.0.1:56010
+
+spring:
+  application:
+    #服务名
+    name: nacos-restful-consumer
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+        # 指定命名空间的ID
+        namespace: 88925201-ed58-4af9-934a-cb8569c3f3ed
+      config:
+        # 指定配置中心的地址
+        server-addr: 127.0.0.1:8848
+        namespace: 88925201-ed58-4af9-934a-cb8569c3f3ed
+        # 指定配置文件的扩展名，配置文件名称根据application.name的命名成加扩展名拼装
+        file-extension: yaml
+        group: DEFAULT_GROUP
+        # 扩展配置
+        ext-config[0]:
+          data-id: ext-config-consumer01.yaml
+          group: COMMON_GROUP
+          refresh: true
+        ext-config[1]:
+          data-id: ext-config-consumer02.yaml
+          group: COMMON_GROUP
+          #是否立即响应刷新
+          refresh: true
+          # 抽取servlet公用的配置到独立的配置文件中
+        ext-config[2]:
+          data-id: ext-config-http.yaml
+          group: COMMON_GROUP
+          #是否立即响应刷新
+          refresh: true

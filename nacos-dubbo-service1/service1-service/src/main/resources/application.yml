@@ -10,6 +10,7 @@ spring:
     nacos:
       discovery:
         server-addr: 127.0.0.1:8848
+        namespace: 88925201-ed58-4af9-934a-cb8569c3f3ed
 dubbo:
   scan:
     base-packages: com.eimya.microservice.service1.service
