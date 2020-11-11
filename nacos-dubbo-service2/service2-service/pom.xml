@@ -11,10 +11,6 @@
 
     <artifactId>service2-service</artifactId>
     <dependencies>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
         <!--        服务发现的客户端 1、将自己的地址注册到服务发现中心 2、从服务发现中心获取服务列表-->
         <dependency>
             <groupId>com.alibaba.cloud</groupId>

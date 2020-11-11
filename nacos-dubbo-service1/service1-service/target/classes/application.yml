@@ -25,4 +25,4 @@ dubbo:
     qos-enable: false
   consumer:
     # dubbo启动时是否检查依赖的服务
-    check: true
+    check: false
